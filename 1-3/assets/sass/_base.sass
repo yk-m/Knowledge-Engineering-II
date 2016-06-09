@@ -1,0 +1,115 @@
+/// BEM Helper
+/// Block Element
+/// @access public
+/// @param {String} $element - Element's name
+=element($element)
+	&__#{$element}
+		@content;
+
+/// Block Modifier
+/// @access public
+/// @param {String} $modifier - Modifier's name
+=modifier($modifier)
+	&--#{$modifier}
+		@content;
+
+
+
+/// Preferences
+/// Colors
+$background: #FFFFFF
+$weak-background: #F1F4F9
+$dark-background: #34425A 
+$accent-color: #e74c3c
+
+$font-color: #4E5E6A
+$light-color: #FFFFFF
+$base-font-size: 15px
+
+
+
+/// Mixins
+/// Box Shadow
+/// @access public
+=shadow()
+	box-shadow: 0 5px 5px -5px rgba(0, 0, 0, .1)
+
+/// Clear Fix
+/// @access public
+=clearfix()
+	*zoom: 1;
+	
+	&:after
+		content: "";
+		display: table;
+		clear: both;
+
+
+
+/// Grid System
+$width: 980px
+$horizontal-span: 20px
+$vertical-span: 12px
+
+$unit-width: 60px
+$unit-height: 36px
+
+@function computeWidth( $column-num )
+	@return ( $unit-width + $horizontal-span ) * $column-num - $horizontal-span
+	
+@function computeHeight( $row-num )
+	@return ( $unit-height + $vertical-span ) * $row-num - $vertical-span
+
+=container()
+	width: $width
+	margin: $horizontal-span auto
+
+=row()
+	+clearfix()
+
+=leftColumn()
+	float: left
+	width: computeWidth(6)
+
+=rightColumn()
+	float: right
+	width: computeWidth(6)
+
+
+
+/// Init
+*
+	-webkit-box-sizing: border-box 
+	-moz-box-sizing: border-box 
+	box-sizing: border-box 
+
+body
+	background-color: $weak-background
+	color: $font-color 
+	font-family: "ヒラギノ角ゴ Pro W3","メイリオ",sans-serif
+	font-size: $base-font-size
+
+h1
+	margin: 0 0 $vertical-span
+	padding: 0
+	font-size: 1.5em;
+
+h2
+	margin: 0
+	padding: 0  
+	font-size: 1.2em;
+
+p
+	margin: 0 0 $vertical-span
+	padding: 0
+
+dl
+	margin: 0
+
+ul
+	margin: 0 0 $vertical-span 2em
+	padding: 0
+
+
+
+

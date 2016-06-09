@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>課題1-1</title>
+	<link rel="stylesheet" href="./assets/stylesheets/common.css">
+
+	<script src="./assets/javascript/Array.js"></script>
+	<script src="./assets/javascript/Matrix.js"></script>
+	<script src="./assets/javascript/file/FileSelector.js"></script>
+	<script src="./assets/javascript/file/FileHandler.js"></script>
+
+	<script src="./assets/javascript/Assignments.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		window.onload = function () {
+			new Assignments( {
+				a1: {
+					dropzone:         document.querySelector( '#a1 .drop-zone' )
+				  , output_container: document.querySelector( '#a1 .output' )
+				}
+			} );
+		}
+	</script>
+</head>
+<body>
+	<header id="header" class="">
+		<h1>使い方</h1>
+		<p>
+			ファイルアイコンのある場所にファイルをドロップすると，計算が始まります．<br>
+			計算が終わると，出力ファイルへのリンクが生成されます．クリックしてダウンロードしてください．
+		</p>
+		<p>
+			※ 対応ブラウザは以下の3つです．その他のブラウザではファイルの生成・ダウンロードが正常に動作しません．
+		</p>
+		<ul>
+			<li>Google Chrome</li>
+			<li>Firefox</li>
+			<li>Opera</li>
+		</ul>
+	</header><!-- /header -->
+	<main>
+		<section id="a1">
+			<div class="row">
+				<header class="">
+					<h1>課題1-1　平均特徴量の計算</h1>
+					<p>
+						平均特徴量を計算します．
+					</p>
+					<dl>
+						<dt>入力</dt>
+						<dd>サンプル特徴量（c--.txt）</dd>
+						<dt>出力</dt>
+						<dd>平均特徴量（mean--.txt）</dd>
+					</dl>
+				</header><!-- /header -->
+				<div class="drop-zone">
+					Drop files here
+				</div>
+			</div>
+			<div class="output">
+			</div>
+		</section>
+	</main>
+
+	<div id="loading">
+		<img src="./assets/images/sandglass.svg">
+	</div>
+</body>
+</html>

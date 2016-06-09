@@ -1,0 +1,104 @@
+#header
+	+shadow()
+	padding: $vertical-span $horizontal-span
+	background-color: $background
+
+main > section
+	+shadow()
+	padding: 0
+	background-color: $background 
+	
+	.row
+		padding: $vertical-span $horizontal-span 0
+	
+	.drop-zone
+		+shadow()
+		height: computeHeight( 3 )
+		text-align: center
+		overflow: hidden
+		text-indent: 100%
+		white-space: nowrap
+		background: url( '../images/file.svg' ) no-repeat center $weak-background
+		background-size: computeHeight( 3 ) auto
+		color: $light-color
+		-webkit-border-radius: 2px 
+		border-radius: 2px 
+		transition: color color .5s ease, background-color .8s ease, border-color .8s ease
+
+		&.drag-over
+			background-color: rgba( $accent-color, .5 )
+			transition: color .5s ease, background-color .8s ease, border-color .8s ease
+	
+	.output
+		padding: 0 ($horizontal-span)/2 $vertical-span
+		min-height: $vertical-span
+		
+		ul
+			margin: 0
+			padding: $unit-height 0 0
+			list-style-type: none
+		
+			&:empty
+				padding: 0
+				height: $vertical-span
+			
+		li
+			display: inline-block
+			
+			a
+				display: inline-block
+				margin: 0 ($horizontal-span)/2 $vertical-span
+				padding: 13px
+				width: computeWidth( 2 )
+				text-decoration: none
+				color: $accent-color 
+				border: 1px solid $accent-color 
+				transition: color .5s ease, background-color .8s ease, border-color .8s ease
+				-webkit-border-radius: 2px 
+				border-radius: 2px
+				
+				&:hover
+					background-color: $accent-color 
+					color: $light-color
+
+ul.input-files
+	margin: 0 0 $vertical-span
+	padding: 0
+	list-style-type: none
+	font-size: 0 
+	
+	li
+		font-size: 15px
+		margin: 0
+		text-align: center 
+		display: inline-block
+		width: computeWidth( 1 )
+		height: computeHeight( 1 )
+		line-height: computeHeight( 1 )
+		color: $accent-color 
+		background: $weak-background
+		transition: color .5s ease, background-color .8s ease, border-color .8s ease
+		
+		&.loaded
+			background: $accent-color
+			color: $light-color
+
+#loading
+	display: none
+	position: fixed
+	top: 0
+	left: 0
+	height: 100%
+	width: 100%
+	background: rgba( $weak-background, .5 )
+
+	img
+		display: block
+		height: computeWidth( 2 )
+		width: computeWidth( 2 )
+		position: fixed
+		top: 50%
+		left: 50%
+		margin: computeWidth( 2 )/-2 0 0 computeWidth( 2 )/-2
+		opacity: 1
+

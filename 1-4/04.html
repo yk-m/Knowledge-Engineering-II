@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>課題1-4</title>
+	<link rel="stylesheet" href="./assets/stylesheets/common.css">
+
+	<script src="./assets/javascript/Array.js"></script>
+	<script src="./assets/javascript/Matrix.js"></script>
+	<script src="./assets/javascript/file/FileSelector.js"></script>
+	<script src="./assets/javascript/file/FileHandler.js"></script>
+
+	<script src="./assets/javascript/Assignments.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		window.onload = function () {
+			new Assignments( {
+				a4: {
+					dropzone:         document.querySelector( '#a4 .drop-zone' )
+				  , output_container: document.querySelector( '#a4 .output' )
+				  , mean_dropzone:    document.getElementById( 'means' )
+				  , eigens_dropzone:  document.getElementById( 'eigens' )
+				  , prepare_section:  document.getElementById( 'prepare' )
+				  , compute_section:  document.getElementById( 'a4' )
+				}
+			} );
+		}
+	</script>
+</head>
+<body>
+	<header id="header" class="">
+		<h1>使い方</h1>
+		<p>
+			準備として，mean01.txt〜mean46.txt，eigen01.txt〜eigen46.txtを，下の赤い数字が並び，背景色がかかっている領域にドロップしてください． ドロップする際には，すべてまとめてでも，一つづつでも，重複しても構いません． <br>
+			<br>
+			すべてのファイルがドロップされると，準備セクションは消え，マハラノビス距離を計算するできるようになります． <br>
+			ファイルアイコンが現れるので，そこに計算したいファイルをドロップしてください．<br>
+			計算が終わると，出力ファイルへのリンクが生成されます．クリックしてダウンロードしてください．
+		</p>
+		<p>
+			※ 対応ブラウザは以下の3つです．その他のブラウザではファイルの生成・ダウンロードが正常に動作しません．
+		</p>
+		<ul>
+			<li>Google Chrome</li>
+			<li>Firefox</li>
+			<li>Opera</li>
+		</ul>
+	</header><!-- /header -->
+
+	<main>
+		<section id="prepare">
+			<div class="row">
+				<section id="means" class="left-column">
+					<h1>平均特徴量 <span>（mean--.txt）</span></h1>
+					<ul class="input-files">
+						<li id="mean01">01</li>
+						<li id="mean02">02</li>
+						<li id="mean03">03</li>
+						<li id="mean04">04</li>
+						<li id="mean05">05</li>
+						<li id="mean06">06</li>
+						<li id="mean07">07</li>
+						<li id="mean08">08</li>
+						<li id="mean09">09</li>
+						<li id="mean10">10</li>
+						<li id="mean11">11</li>
+						<li id="mean12">12</li>
+						<li id="mean13">13</li>
+						<li id="mean14">14</li>
+						<li id="mean15">15</li>
+						<li id="mean16">16</li>
+						<li id="mean17">17</li>
+						<li id="mean18">18</li>
+						<li id="mean19">19</li>
+						<li id="mean20">20</li>
+						<li id="mean21">21</li>
+						<li id="mean22">22</li>
+						<li id="mean23">23</li>
+						<li id="mean24">24</li>
+						<li id="mean25">25</li>
+						<li id="mean26">26</li>
+						<li id="mean27">27</li>
+						<li id="mean28">28</li>
+						<li id="mean29">29</li>
+						<li id="mean30">30</li>
+						<li id="mean31">31</li>
+						<li id="mean32">32</li>
+						<li id="mean33">33</li>
+						<li id="mean34">34</li>
+						<li id="mean35">35</li>
+						<li id="mean36">36</li>
+						<li id="mean37">37</li>
+						<li id="mean38">38</li>
+						<li id="mean39">39</li>
+						<li id="mean40">40</li>
+						<li id="mean41">41</li>
+						<li id="mean42">42</li>
+						<li id="mean43">43</li>
+						<li id="mean44">44</li>
+						<li id="mean45">45</li>
+						<li id="mean46">46</li>
+					</ul>
+				</section>
+				<section id="eigens" class="right-column">
+					<h1>固有値・固有ベクトル <span>（eigen--.txt）</span></h1>
+					<ul class="input-files">
+						<li id="eigen01">01</li>
+						<li id="eigen02">02</li>
+						<li id="eigen03">03</li>
+						<li id="eigen04">04</li>
+						<li id="eigen05">05</li>
+						<li id="eigen06">06</li>
+						<li id="eigen07">07</li>
+						<li id="eigen08">08</li>
+						<li id="eigen09">09</li>
+						<li id="eigen10">10</li>
+						<li id="eigen11">11</li>
+						<li id="eigen12">12</li>
+						<li id="eigen13">13</li>
+						<li id="eigen14">14</li>
+						<li id="eigen15">15</li>
+						<li id="eigen16">16</li>
+						<li id="eigen17">17</li>
+						<li id="eigen18">18</li>
+						<li id="eigen19">19</li>
+						<li id="eigen20">20</li>
+						<li id="eigen21">21</li>
+						<li id="eigen22">22</li>
+						<li id="eigen23">23</li>
+						<li id="eigen24">24</li>
+						<li id="eigen25">25</li>
+						<li id="eigen26">26</li>
+						<li id="eigen27">27</li>
+						<li id="eigen28">28</li>
+						<li id="eigen29">29</li>
+						<li id="eigen30">30</li>
+						<li id="eigen31">31</li>
+						<li id="eigen32">32</li>
+						<li id="eigen33">33</li>
+						<li id="eigen34">34</li>
+						<li id="eigen35">35</li>
+						<li id="eigen36">36</li>
+						<li id="eigen37">37</li>
+						<li id="eigen38">38</li>
+						<li id="eigen39">39</li>
+						<li id="eigen40">40</li>
+						<li id="eigen41">41</li>
+						<li id="eigen42">42</li>
+						<li id="eigen43">43</li>
+						<li id="eigen44">44</li>
+						<li id="eigen45">45</li>
+						<li id="eigen46">46</li>
+					</ul>
+				</section>
+			</div>
+		</section>
+		<section id="a4" class="hide">
+			<div class="row">
+				<header class="left-column">
+					<h1>課題1-4　マハラノビス距離</h1>
+					<p>
+						認識対象文字と各字種の間のマハラノビス距離を計算します． <br>
+						認識結果はあ〜んを1〜46の数字で表現した値が表示されます．
+					</p>
+					<dl>
+						<dt>入力</dt>
+						<dd>認識対象文字の特徴量（c--.txt）</dd>
+						<dt>出力</dt>
+						<dd>各字種との距離（distance--_-.txt）</dd>
+					</dl>
+				</header><!-- /header -->
+				<div class="drop-zone right-column">
+					Drop files here
+				</div>
+			</div>
+			<div class="output">
+			</div>
+		</section>
+	</main>
+
+	<div id="loading">
+		<img src="./assets/images/sandglass.svg">
+	</div>
+</body>
+</html>

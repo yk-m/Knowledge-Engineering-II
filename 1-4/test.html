@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>課題1-4</title>
+	<link rel="stylesheet" href="./assets/stylesheets/common.css">
+
+	<script src="./assets/javascript/Array.js"></script>
+	<script src="./assets/javascript/Matrix.js"></script>
+	<script src="./assets/javascript/file/FileSelector.js"></script>
+	<script src="./assets/javascript/file/FileHandler.js"></script>
+
+	<script src="./assets/javascript/Assignments.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		window.onload = function () {
+			new Assignments( {
+				a4: {
+					dropzone:         document.querySelector( '#a4 .drop-zone' )
+				  , output_container: document.querySelector( '#a4 .output' )
+				  , mean_dropzone:    document.getElementById( 'means' )
+				  , eigens_dropzone:  document.getElementById( 'eigens' )
+				  , prepare_section:  document.getElementById( 'prepare' )
+				  , compute_section:  document.getElementById( 'a4' )
+				}
+			} );
+		}
+	</script>
+</head>
+<body>
+	<header id="header" class="">
+		<h1>使い方</h1>
+		<p>
+			ファイルアイコンのある場所にファイルをドロップすると，計算が始まります．<br>
+			計算が終わると，出力ファイルへのリンクが生成されます．クリックしてダウンロードしてください．
+		</p>
+		<p>
+			※ 対応ブラウザは以下の3つです．その他のブラウザではファイルの生成・ダウンロードが正常に動作しません．
+		</p>
+		<ul>
+			<li>Google Chrome</li>
+			<li>Firefox</li>
+			<li>Opera</li>
+		</ul>
+	</header><!-- /header -->
+
+	<main>
+		<section id="prepare">
+			<div class="row">
+				<section id="means" class="left-column">
+					<h1>平均特徴量 <span>（mean--.txt）</span></h1>
+					<ul class="input-files">
+						<li id="mean01">01</li>
+						<li id="mean02">02</li>
+						<li id="mean03">03</li>
+						<li id="mean04">04</li>
+						<li id="mean05">05</li>
+						<li id="mean06">06</li>
+						<li id="mean07">07</li>
+						<li id="mean08">08</li>
+						<li id="mean09">09</li>
+						<li id="mean10">10</li>
+						<li id="mean11">11</li>
+						<li id="mean12">12</li>
+						<li id="mean13">13</li>
+						<li id="mean14">14</li>
+						<li id="mean15">15</li>
+						<li id="mean16">16</li>
+						<li id="mean17">17</li>
+						<li id="mean18">18</li>
+						<li id="mean19">19</li>
+						<li id="mean20">20</li>
+						<li id="mean21">21</li>
+						<li id="mean22">22</li>
+						<li id="mean23">23</li>
+						<li id="mean24">24</li>
+						<li id="mean25">25</li>
+						<li id="mean26">26</li>
+						<li id="mean27">27</li>
+						<li id="mean28">28</li>
+						<li id="mean29">29</li>
+						<li id="mean30">30</li>
+						<li id="mean31">31</li>
+						<li id="mean32">32</li>
+						<li id="mean33">33</li>
+						<li id="mean34">34</li>
+						<li id="mean35">35</li>
+						<li id="mean36">36</li>
+						<li id="mean37">37</li>
+						<li id="mean38">38</li>
+						<li id="mean39">39</li>
+						<li id="mean40">40</li>
+						<li id="mean41">41</li>
+						<li id="mean42">42</li>
+						<li id="mean43">43</li>
+						<li id="mean44">44</li>
+						<li id="mean45">45</li>
+						<li id="mean46">46</li>
+					</ul>
+				</section>
+				<section id="eigens" class="right-column">
+					<h1>固有値・固有ベクトル <span>（eigen--.txt）</span></h1>
+					<ul class="input-files">
+						<li id="eigen01">01</li>
+						<li id="eigen02">02</li>
+						<li id="eigen03">03</li>
+						<li id="eigen04">04</li>
+						<li id="eigen05">05</li>
+						<li id="eigen06">06</li>
+						<li id="eigen07">07</li>
+						<li id="eigen08">08</li>
+						<li id="eigen09">09</li>
+						<li id="eigen10">10</li>
+						<li id="eigen11">11</li>
+						<li id="eigen12">12</li>
+						<li id="eigen13">13</li>
+						<li id="eigen14">14</li>
+						<li id="eigen15">15</li>
+						<li id="eigen16">16</li>
+						<li id="eigen17">17</li>
+						<li id="eigen18">18</li>
+						<li id="eigen19">19</li>
+						<li id="eigen20">20</li>
+						<li id="eigen21">21</li>
+						<li id="eigen22">22</li>
+						<li id="eigen23">23</li>
+						<li id="eigen24">24</li>
+						<li id="eigen25">25</li>
+						<li id="eigen26">26</li>
+						<li id="eigen27">27</li>
+						<li id="eigen28">28</li>
+						<li id="eigen29">29</li>
+						<li id="eigen30">30</li>
+						<li id="eigen31">31</li>
+						<li id="eigen32">32</li>
+						<li id="eigen33">33</li>
+						<li id="eigen34">34</li>
+						<li id="eigen35">35</li>
+						<li id="eigen36">36</li>
+						<li id="eigen37">37</li>
+						<li id="eigen38">38</li>
+						<li id="eigen39">39</li>
+						<li id="eigen40">40</li>
+						<li id="eigen41">41</li>
+						<li id="eigen42">42</li>
+						<li id="eigen43">43</li>
+						<li id="eigen44">44</li>
+						<li id="eigen45">45</li>
+						<li id="eigen46">46</li>
+					</ul>
+				</section>
+			</div>
+		</section>
+		<section id="a4" class="">
+			<div class="row">
+				<header class="left-column">
+					<h1>課題1-4　マハラノビス距離</h1>
+					<p>
+						認識対象文字と各字種の間のマハラノビス距離を計算します．
+					</p>
+					<dl>
+						<dt>入力</dt>
+						<dd>認識対象文字の特徴量（c--.txt）</dd>
+						<dt>出力</dt>
+						<dd>各字種との距離（distance--.txt）</dd>
+					</dl>
+				</header><!-- /header -->
+				<div class="drop-zone right-column">
+					Drop files here
+				</div>
+			</div>
+			<div class="output"></div>
+		</section>
+		<section id="a4" class="">
+			<div class="row">
+				<header class="left-column">
+					<h1>課題1-4　マハラノビス距離</h1>
+					<p>
+						認識対象文字と各字種の間のマハラノビス距離を計算します．
+					</p>
+					<dl>
+						<dt>入力</dt>
+						<dd>認識対象文字の特徴量（c--.txt）</dd>
+						<dt>出力</dt>
+						<dd>各字種との距離（distance--.txt）</dd>
+					</dl>
+				</header><!-- /header -->
+				<div class="drop-zone right-column">
+					Drop files here
+				</div>
+			</div>
+			<div class="output">
+			<table class="table"><tbody><tr><th>認識ターゲット</th><th>認識結果</th><th>距離</th></tr><tr><td>c01.txt サンプル1</td><td>1</td><td><a href="blob:file:///442f1c39-15b0-4365-84d9-b94ea61e4671">distances01_0.txt</a></td></tr><tr><td>c01.txt サンプル2</td><td>1</td><td><a href="blob:file:///cb95bf29-36d3-4fbc-ad10-324ed1e01b8b">distances01_1.txt</a></td></tr><tr><td>c01.txt サンプル3</td><td>1</td><td><a href="blob:file:///760d9d71-fa3c-4571-b7c1-d177c5a0a4dc">distances01_2.txt</a></td></tr><tr><td>c01.txt サンプル4</td><td>1</td><td><a href="blob:file:///413449aa-b2b8-414b-8f7d-217eb6375483">distances01_3.txt</a></td></tr><tr><td>c01.txt サンプル5</td><td>1</td><td><a href="blob:file:///62afab72-faea-4d06-8a5e-4a978f6f229b">distances01_4.txt</a></td></tr><tr><td>c01.txt サンプル6</td><td>1</td><td><a href="blob:file:///9e48acb3-6b4e-43bb-a33b-3724cf777b47">distances01_5.txt</a></td></tr><tr><td>c01.txt サンプル7</td><td>1</td><td><a href="blob:file:///af3d8006-bc73-4bca-a602-881fe4b37228">distances01_6.txt</a></td></tr><tr><td>c01.txt サンプル8</td><td>1</td><td><a href="blob:file:///6b43e284-608c-4638-aa10-42a8afe57930">distances01_7.txt</a></td></tr><tr><td>c01.txt サンプル9</td><td>1</td><td><a href="blob:file:///b1816c55-a3ee-4b53-8275-3973ae7b121d">distances01_8.txt</a></td></tr><tr><td>c01.txt サンプル10</td><td>1</td><td><a href="blob:file:///368b5c4f-d24d-4270-8ddf-aeb77fd4a0ee">distances01_9.txt</a></td></tr><tr><td>c01.txt サンプル11</td><td>1</td><td><a href="blob:file:///2a87e726-a3d4-4c11-9361-b6b8646e16a6">distances01_10.txt</a></td></tr><tr><td>c01.txt サンプル12</td><td>1</td><td><a href="blob:file:///a4ad2836-f052-41e2-a3e1-34c16c4e2436">distances01_11.txt</a></td></tr><tr><td>c01.txt サンプル13</td><td>1</td><td><a href="blob:file:///4fdb3871-1828-47df-a316-d28a3f481853">distances01_12.txt</a></td></tr><tr><td>c01.txt サンプル14</td><td>1</td><td><a href="blob:file:///b86c06bc-1236-4247-952c-1cd9a1b66613">distances01_13.txt</a></td></tr><tr><td>c01.txt サンプル15</td><td>1</td><td><a href="blob:file:///a049c487-4739-4f86-be93-ca86f3cec428">distances01_14.txt</a></td></tr><tr><td>c01.txt サンプル16</td><td>1</td><td><a href="blob:file:///0749d7a7-d319-42c4-a0b7-16fd1ef2071a">distances01_15.txt</a></td></tr><tr><td>c01.txt サンプル17</td><td>1</td><td><a href="blob:file:///e9417021-0303-488a-8b3f-49a67483e175">distances01_16.txt</a></td></tr><tr><td>c01.txt サンプル18</td><td>1</td><td><a href="blob:file:///7c846bd5-8521-4626-84cd-219349194856">distances01_17.txt</a></td></tr><tr><td>c01.txt サンプル19</td><td>1</td><td><a href="blob:file:///f55c3bdd-fab5-4011-809a-44871fa05f32">distances01_18.txt</a></td></tr><tr><td>c01.txt サンプル20</td><td>1</td><td><a href="blob:file:///355051bd-f808-4cd5-9c13-4c0a180f7d3e">distances01_19.txt</a></td></tr></tbody></table></div>
+		</section>
+	</main>
+
+	<div id="loading">
+		<img src="./assets/images/sandglass.svg">
+	</div>
+</body>
+</html>
