@@ -56,7 +56,7 @@ void freeMatrix( Matrix* matrix );
 
 
 /* ---------------------------------
-	Error Handler 
+	Error Handler
 ---------------------------------- */
 void FileOpenError( const char* fname ) {
 	printf("can't open %s\n", fname);
@@ -176,7 +176,7 @@ void jacobi( Matrix *m, int num_of_file ) {
 
 		// printf("%d回目 : %lf\n", count++, position.value );
 
-		angle = calcAngle( m, position );
+		angle = calcAngle( eigen_values, position );
 		rotate( eigen_values,  position, angle );
 		append( eigen_vectors, position, angle );
 		repair( eigen_values );
@@ -303,7 +303,7 @@ void repair( Matrix *matrix ) {
 			matrix->a[j][i] = matrix->a[i][j];
 		}
 	}
-} 
+}
 
 
 
@@ -328,7 +328,7 @@ Matrix *loadMatrix( const char* fname )
 	dim = countSpliter( line, ' ' );
 
 	rewind(fp);
-	
+
 	m = createMatrix( dim, dim );
 	for ( int i = 0; i < dim; i++ ) {
 		if ( fgets( line, COL_MAX, fp ) == NULL )
@@ -410,7 +410,7 @@ Matrix *createMatrix( int width, int height )
 		AllocationError();
 
 	for ( int i = 0; i < height; i++ ) {
-		if( ( temp->a[i] = (double*)malloc( sizeof(double) * width ) ) == NULL ) 
+		if( ( temp->a[i] = (double*)malloc( sizeof(double) * width ) ) == NULL )
 			AllocationError();
 	}
 
